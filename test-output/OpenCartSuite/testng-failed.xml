@@ -7,20 +7,27 @@
   <test thread-count="5" name="OpencartTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testCases.TC_001_AccountRegistrationTest">
+      <class name="testCases.Register.TC_001_AccountRegistrationTest">
         <methods>
           <include name="teardown"/>
           <include name="test_account_Registration"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC_001_AccountRegistrationTest -->
-      <class name="testCases.TC_002_LoginTest">
+      </class> <!-- testCases.Register.TC_001_AccountRegistrationTest -->
+      <class name="testCases.login.TC_002_LoginTest">
         <methods>
           <include name="teardown"/>
-          <include name="setup"/>
           <include name="test_login"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC_002_LoginTest -->
+      </class> <!-- testCases.login.TC_002_LoginTest -->
+      <class name="testCases.search.TC_004_Search">
+        <methods>
+          <include name="test_search"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.search.TC_004_Search -->
     </classes>
   </test> <!-- OpencartTest(failed) -->
 </suite> <!-- Failed suite [OpenCartSuite] -->
