@@ -53,7 +53,7 @@ public class BaseClass
 		// Below line is used for removing the statment at run time "Chrome is being controlled by automated test software"
 		//   options.setExperimentalOption("excludeSwitches",new String[] {"enable-Automation"});not working in my case so using collections instead of array
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));    
-		option.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
+		
 
 
 

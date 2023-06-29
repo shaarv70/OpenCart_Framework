@@ -1,4 +1,4 @@
-package testCases;
+package testCases.login;
 
 
 import org.testng.Assert;
