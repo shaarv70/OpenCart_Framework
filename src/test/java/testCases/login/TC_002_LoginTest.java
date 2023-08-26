@@ -8,6 +8,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 import testBase.BaseClass;
+import testBase.Routes;
 
 
 public class TC_002_LoginTest extends BaseClass
@@ -28,8 +29,8 @@ public class TC_002_LoginTest extends BaseClass
 
 			LoginPage lp= new LoginPage(driver);
 			logger.info("Providing login details");
-			lp.enterEmail(rb.getString("email"));
-	        lp.enterPassword(rb.getString("password"));
+			lp.enterEmail(rb.getString(Routes.email));
+	        lp.enterPassword(rb.getString(Routes.password));
 			logger.info("Clicked on login btn");
 			lp.clickOnlogin();
 

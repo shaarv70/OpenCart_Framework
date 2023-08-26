@@ -1,0 +1,13 @@
+[
+{
+   "username":"arvindtest@gmail.com",
+   "password":"test@123",
+   "res":"Valid"
+},
+
+{
+   "username":"lakshmi@yahoo.com",
+   "password":"Laxmi",
+   "res":"Invalid"
+}
+]

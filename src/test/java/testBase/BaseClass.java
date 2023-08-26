@@ -26,20 +26,23 @@ import org.testng.annotations.Parameters;
 
 
 
+
 public class BaseClass 
 {
 	public static WebDriver driver;/*(Important) we are making driver instance as static because otherwise two driver instances
-	                             will be created, one for BaseClass itself & and the other one is for object of 
-	                             BaseClass in Extent report manager which is creating the object of BaseCLass for 
-	                             capturing screenshots on failure of the testcases. */
+	                                will be created, one for BaseClass itself & and the other one is for object of 
+	                               BaseClass in Extent report manager which is creating the object of BaseCLass for 
+	                                capturing screenshots on failure of the testcases. */
 	public Logger logger;
-	public ResourceBundle rb;// to load config.properties file
+	public static ResourceBundle rb;// to load config.properties file
 
 	@BeforeClass(groups ={"Master","Sanity","Regression"})
-	@Parameters("browser")
-	public void setup(String br)
-	{
-		rb= ResourceBundle.getBundle("config");/*load config file data(#this file is used to store the variables 
+    
+	//@Parameters("browser")
+	public void setup()
+	{  rb= ResourceBundle.getBundle(Routes.ConfigFile);
+	   
+		/*rb= ResourceBundle.getBundle("config");/*load config file data(#this file is used to store the variables 
 		which are using repeatedly in all test cases like URL, email & pass for login etc. 
 		this variables can be used anywhere in the testcase.)
 		Note: Dont even click on space in config file because config file consider even spaces also*/ 
@@ -48,33 +51,30 @@ public class BaseClass
 
 		ChromeOptions options=new ChromeOptions();
 		EdgeOptions option=new EdgeOptions();
-
+         
 
 		// Below line is used for removing the statment at run time "Chrome is being controlled by automated test software"
 		//   options.setExperimentalOption("excludeSwitches",new String[] {"enable-Automation"});not working in my case so using collections instead of array
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));    
-		
+		String br=System.getProperty("br")!=null?System.getProperty("br"):rb.getString("br");
 
-
-
-		if (br.equals("Chrome"))
+        if (br.equals(Routes.Chrome))
 		{
 			driver=new ChromeDriver(options);
 		}
-		else if(br.equals("Edge"))
+		else if(br.equals(Routes.Edge))
 		{   
 			driver= new EdgeDriver(option);
 		}
 
-		else if(br.equals("Firefox"))
+		else if(br.equals(Routes.Firefox))
 		{
 			driver= new FirefoxDriver();
 		}
 
 	//	driver.manage().deleteAllCookies();// it will delete all prepopulated data on the browser
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-		driver.get(rb.getString("appURL"));// fetching value of appURL from config file 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
+	    driver.get(rb.getString(Routes.appURL));// fetching value of appURL from config file 
 		driver.manage().window().maximize();
 	}
 
@@ -83,7 +83,7 @@ public class BaseClass
 	{
 		driver.quit();
 	}
-
+	
 	public String randomString()
 	{
 		String generatedString=RandomStringUtils.randomAlphabetic(5);
@@ -127,4 +127,9 @@ public class BaseClass
 		}
 		return destination;
 
-	}}
+	}
+	
+   	
+  
+
+}

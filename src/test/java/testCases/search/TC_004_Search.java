@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.Search_Page;
 import testBase.BaseClass;
+import testBase.Routes;
 
 public class TC_004_Search extends BaseClass
 {
@@ -19,7 +20,7 @@ public class TC_004_Search extends BaseClass
 		logger.info("*** Starting TC_001_AccountRegistrationTest *** ");
 		HomePage hp = new HomePage(driver);
 		logger.info("Entering product name");
-		hp.search(rb.getString("product"));
+		hp.search(rb.getString(Routes.product));
 		logger.info("Clicking on search button");
 		hp.search_button();
 		Search_Page sp= new Search_Page(driver);

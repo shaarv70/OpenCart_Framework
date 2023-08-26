@@ -5,12 +5,12 @@
 		<listener class-name="utilities.ExtentReportManager"/>
 	</listeners>
 	<test thread-count="5" name="OpencartTest">
-    <parameter name="browser" value="Chrome"/>
+   <!-- <parameter name="browser" value="Chrome"/>-->
     <classes>
      <class name="testCases.Register.TC_001_AccountRegistrationTest"/>
-      <class name="testCases.login.TC_002_LoginTest"/>
+    <class name="testCases.login.TC_002_LoginTest"/>
       <class name="testCases.search.TC_004_Search"/>
-      
+     
     </classes>
   </test> <!-- OpencartTest -->
 </suite> <!-- OpenCartSuite -->

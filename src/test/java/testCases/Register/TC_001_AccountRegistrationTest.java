@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pageObjects.AccountRegistrationPage;
 import pageObjects.HomePage;
 import testBase.BaseClass;
+import testBase.Routes;
 
 public class TC_001_AccountRegistrationTest extends BaseClass
 
@@ -26,7 +27,7 @@ public class TC_001_AccountRegistrationTest extends BaseClass
 			logger.info("Providing customer data");
 			regpage.setFirstname(randomString().toUpperCase());
 			regpage.setSecondname(randomString().toUpperCase());
-			regpage.setEmail(randomString()+"@gmail.com");// has to be generated randomly
+			regpage.setEmail(randomString()+Routes.randomemail);// has to be generated randomly
 			regpage.setTelephone(randomNumber());
 			String pass= alphaNumeric();
 			regpage.setPassword(pass);

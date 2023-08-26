@@ -1,15 +1,26 @@
 package utilities;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 
 //Here we are storing excel data in 2-d array with the help of Excel utility class 
 
 import org.testng.annotations.DataProvider;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class DataProviders {
 
 	//DataProvider 1
+	
+	private static List<HashMap<String, String>> datamap;
+	static List<HashMap<String,String>> data;
 	
 	@DataProvider(name="LoginData")
 	public String [][] getData() throws IOException
@@ -34,6 +45,31 @@ public class DataProviders {
 				
 	}
 	
+	
+	public static List<HashMap<String, String>> getJsonData(String path) throws IOException
+	{
+		
+		
+		String jsonstring =FileUtils.readFileToString(new File(path),StandardCharsets.UTF_8);//read json to string
+		
+		//string to HashMap
+		ObjectMapper mapper= new ObjectMapper();
+		data=mapper.readValue(jsonstring, new TypeReference<List<HashMap<String,String>>>(){
+		}); 
+		
+		return data;
+	}
+	
+	@DataProvider(name="LoginDatawithJson")
+	 public static Object[][] getJSonDatatest() throws IOException {
+		   
+		    
+		    List<HashMap<String,String>> data = getJsonData(System.getProperty("user.dir")+"\\testData\\Opencart_LoginData.json");
+		    return new Object[][] {{data.get(0)},{data.get(1)}};
+	        
+		   
+	   }
+
 	//DataProvider 2
 	
 	//DataProvider 3

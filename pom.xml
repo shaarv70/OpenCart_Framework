@@ -3,6 +3,114 @@
   <groupId>OpenCart_Framework</groupId>
   <artifactId>OpenCart_Framework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+ <profiles>
+	 <profile>
+		 <id>DataDrivenTest</id>
+		 <build>
+    <pluginManagement>
+    <plugins>
+    <plugin>
+			
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId><!--It is responsible for executing the test cases sequentially(we have  used for running project through pom.xml)-->
+          <version>3.0.0</version>
+       
+            <configuration>
+			  
+			  <suiteXmlFiles>
+				
+				  <suiteXmlFile>datadriventest.xml</suiteXmlFile>
+			 
+			  </suiteXmlFiles>
+           
+          </configuration>
+        </plugin>
+         </plugins>
+      </pluginManagement>
+     </build>
+		 </profile>
+	 <profile>
+		 <id>GroupingTest</id>
+	<build>
+     <pluginManagement>
+       <plugins>
+          <plugin>
+			
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId><!--It is responsible for executing the test cases sequentially(we have  used for running project through pom.xml)-->
+          <version>3.0.0</version>
+       
+            <configuration>
+			  
+			  <suiteXmlFiles>
+				
+				  <suiteXmlFile>grouping.xml</suiteXmlFile>
+			 
+			  </suiteXmlFiles>
+           
+          </configuration>
+        </plugin>
+         </plugins>
+      </pluginManagement>
+     </build>
+		 
+	 </profile>
+	 <profile>
+		 <id>MasterTests</id>
+		 <build>
+     <pluginManagement>
+       <plugins>
+          <plugin>
+			
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId><!--It is responsible for executing the test cases sequentially(we have  used for running project through pom.xml)-->
+          <version>3.0.0</version>
+       
+            <configuration>
+			  
+			  <suiteXmlFiles>
+				
+				  <suiteXmlFile>master.xml</suiteXmlFile>
+			 
+			  </suiteXmlFiles>
+           
+          </configuration>
+        </plugin>
+         </plugins>
+      </pluginManagement>
+     </build>
+	 </profile>
+	 <profile>
+		 <id>CrossBrowserTests</id>
+		  <build>
+     <pluginManagement>
+       <plugins>
+          <plugin>
+			
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId><!--It is responsible for executing the test cases sequentially(we have  used for running project through pom.xml)-->
+          <version>3.0.0</version>
+       
+            <configuration>
+			  
+			  <suiteXmlFiles>
+				
+				  <suiteXmlFile>crossbrowserTesting.xml</suiteXmlFile>
+			 
+			  </suiteXmlFiles>
+           
+          </configuration>
+        </plugin>
+         </plugins>
+      </pluginManagement>
+     </build>
+		 
+	 </profile>
+	 
+	 
+	 
+ </profiles> 
 <build>
     <pluginManagement>
     
@@ -42,7 +150,7 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.8.3</version>
+    <version>4.11.0</version>
 </dependency>
 
 
@@ -107,7 +215,13 @@
   <artifactId>lombok</artifactId>
   <version>1.18.22</version>
 </dependency>
-
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId><!--Here we are using it because we need to send collections 
+                                                           as a request body, so jackson databind convert this collection 
+                                                           Json object -->
+    <artifactId>jackson-databind</artifactId>
+    <version>2.15.2</version>
+</dependency>
 	
 </dependencies>
 
