@@ -104,3 +104,37 @@
 21:34:41.070 [main] INFO  testCases.login.TC_005_LoginDDT2withJson - Providing login details
 21:34:41.154 [main] INFO  testCases.login.TC_005_LoginDDT2withJson - Clicked on login btn
 21:34:51.410 [main] INFO  testCases.login.TC_005_LoginDDT2withJson - *** Finishing TC_005_LoginDDT2withJson ***
+18:19:18.352 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - *** Starting TC_001_AccountRegistrationTest *** 
+18:19:19.877 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Clicked on myAccount
+18:19:29.924 [main] ERROR testCases.Register.TC_001_AccountRegistrationTest - Test Failed
+18:19:37.406 [main] INFO  testCases.login.TC_002_LoginTest - *** Starting TC_002_LoginTest ***
+18:19:37.407 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on Account
+18:19:38.381 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on login option
+18:19:55.673 [main] INFO  testCases.search.TC_004_Search - *** Starting TC_001_AccountRegistrationTest *** 
+18:19:55.674 [main] INFO  testCases.search.TC_004_Search - Entering product name
+18:19:55.912 [main] INFO  testCases.search.TC_004_Search - Clicking on search button
+18:28:32.928 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - *** Starting TC_001_AccountRegistrationTest *** 
+18:28:33.757 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Clicked on myAccount
+18:28:43.872 [main] ERROR testCases.Register.TC_001_AccountRegistrationTest - Test Failed
+18:28:51.579 [main] INFO  testCases.login.TC_002_LoginTest - *** Starting TC_002_LoginTest ***
+18:28:51.586 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on Account
+18:28:52.446 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on login option
+18:29:10.053 [main] INFO  testCases.search.TC_004_Search - *** Starting TC_001_AccountRegistrationTest *** 
+18:29:10.060 [main] INFO  testCases.search.TC_004_Search - Entering product name
+18:29:10.347 [main] INFO  testCases.search.TC_004_Search - Clicking on search button
+18:30:53.681 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - *** Starting TC_001_AccountRegistrationTest *** 
+18:30:54.026 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Clicked on myAccount
+18:30:56.983 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Clicked on register link
+18:30:57.007 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Providing customer data
+18:31:02.248 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Clicked on continue
+18:31:02.371 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - Validating expected message
+18:31:02.375 [main] INFO  testCases.Register.TC_001_AccountRegistrationTest - *** Finishing TC_001_AccountRegistrationTest *** 
+18:31:10.489 [main] INFO  testCases.login.TC_002_LoginTest - *** Starting TC_002_LoginTest ***
+18:31:10.494 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on Account
+18:31:10.772 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on login option
+18:31:12.569 [main] INFO  testCases.login.TC_002_LoginTest - Providing login details
+18:31:13.277 [main] INFO  testCases.login.TC_002_LoginTest - Clicked on login btn
+18:31:32.207 [main] INFO  testCases.search.TC_004_Search - *** Starting TC_001_AccountRegistrationTest *** 
+18:31:32.211 [main] INFO  testCases.search.TC_004_Search - Entering product name
+18:31:32.505 [main] INFO  testCases.search.TC_004_Search - Clicking on search button
+18:31:35.788 [main] INFO  testCases.search.TC_004_Search - *** Finishing TC_001_AccountRegistrationTest ***

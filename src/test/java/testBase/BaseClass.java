@@ -51,8 +51,8 @@ public class BaseClass
 
 		ChromeOptions options=new ChromeOptions();
 		EdgeOptions option=new EdgeOptions();
-         
-
+         options.setAcceptInsecureCerts(true);
+           
 		// Below line is used for removing the statment at run time "Chrome is being controlled by automated test software"
 		//   options.setExperimentalOption("excludeSwitches",new String[] {"enable-Automation"});not working in my case so using collections instead of array
 		options.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));    

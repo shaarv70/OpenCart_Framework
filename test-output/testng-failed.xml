@@ -5,15 +5,14 @@
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="OpencartTest(failed)">
-    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testCases.login.TC_005_LoginDDT2withJson">
+      <class name="testCases.login.TC_002_LoginTest">
         <methods>
           <include name="teardown"/>
-          <include name="loginDDTtest"/>
+          <include name="test_login"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.login.TC_005_LoginDDT2withJson -->
+      </class> <!-- testCases.login.TC_002_LoginTest -->
     </classes>
   </test> <!-- OpencartTest(failed) -->
 </suite> <!-- Failed suite [OpenCartSuite] -->
