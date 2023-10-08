@@ -138,3 +138,7 @@
 18:31:32.211 [main] INFO  testCases.search.TC_004_Search - Entering product name
 18:31:32.505 [main] INFO  testCases.search.TC_004_Search - Clicking on search button
 18:31:35.788 [main] INFO  testCases.search.TC_004_Search - *** Finishing TC_001_AccountRegistrationTest ***
+19:16:21.567 [main] INFO  testCases.search.TC_004_Search - *** Starting TC_001_AccountRegistrationTest *** 
+19:16:21.662 [main] INFO  testCases.search.TC_004_Search - Entering product name
+19:16:21.898 [main] INFO  testCases.search.TC_004_Search - Clicking on search button
+19:16:24.268 [main] INFO  testCases.search.TC_004_Search - *** Finishing TC_001_AccountRegistrationTest ***
